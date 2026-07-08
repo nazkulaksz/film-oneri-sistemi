@@ -8,7 +8,6 @@ API_KEY = "Your API KEY"
 
 st.set_page_config(page_title="Film Öneri", layout="wide")
 
-# 🎨 CSS
 st.markdown("""
 <style>
 .movie-card {
@@ -46,7 +45,6 @@ movies = pd.DataFrame(movies_dict)
 
 similarity = pickle.load(open('similarity.pkl','rb'))
 
-# 🎬 Poster
 def fetch_poster(title):
     url = f"https://api.themoviedb.org/3/search/movie?api_key={API_KEY}&query={title}"
     data = requests.get(url).json()
@@ -58,13 +56,11 @@ def fetch_poster(title):
 
     return "https://via.placeholder.com/300x450?text=No+Image"
 
-# 🔍 En yakın filmi bul
 def find_closest(title):
     titles = movies['title'].tolist()
     match = difflib.get_close_matches(title, titles, n=1)
     return match[0] if match else None
 
-# 🤖 Öneri
 def recommend(movie):
     matches = movies[movies['title'].str.lower() == movie.lower()]
 
@@ -86,7 +82,6 @@ def recommend(movie):
 
     return names, posters
 
-# UI
 st.markdown("<h1 style='text-align: center;'>🎬</h1>", unsafe_allow_html=True)
 
 selected_movie = st.text_input("Sevdiğin bir filmi yaz")
@@ -97,10 +92,8 @@ if st.button("Öner"):
         st.warning("Lütfen bir film adı gir")
 
     else:
-        # 🔍 önce direkt dene
         names, posters = recommend(selected_movie)
 
-        # ❌ bulunamadıysa en yakınını bul
         if len(names) == 0:
             closest = find_closest(selected_movie)
 
@@ -111,7 +104,6 @@ if st.button("Öner"):
                 st.error("❌ Film bulunamadı!")
                 st.stop()
 
-        # 🎬 sonuçları göster
         st.markdown("## Eğer bu filmi sevdiysen bunları da sevebilirsin")
 
         cols = st.columns(5)
