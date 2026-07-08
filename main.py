@@ -1,11 +1,9 @@
 import pandas as pd
 import pickle
 
-# 📂 DOĞRU PATH
 
 movies = pd.read_csv(r"C:\Users\egemen\PycharmProjects\project\movie-recommend\data\movies.csv")
 
-# 🎯 sadece title
 
 movies = movies[['title']]
 
