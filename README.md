@@ -47,7 +47,7 @@ film-oneri-sistemi/
 ├── movies.pkl
 │
 ├── data/
-├── posters/
+
 
 ## Setup
 
