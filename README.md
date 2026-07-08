@@ -40,12 +40,21 @@ API_KEY = "YOUR_API_KEY"
 
 ## Project Structure
 
-film-oneri/
+film-oneri-sistemi/
 │
 ├── app.py
+├── main.py   
 ├── movies.pkl
-├── similarity.pkl
-├── requirements.txt
-└── README.md
+│
+├── data/
+├── posters/
+
+## Setup
+
+1. Install requirements
+2. Run main.py to generate similarity.pkl
+3. Run app.py
+
+Note: similarity.pkl is not included due to file size.
 
 
