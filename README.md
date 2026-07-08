@@ -57,4 +57,15 @@ film-oneri-sistemi/
 
 Note: similarity.pkl is not included due to file size.
 
+## Dataset
+
+Due to file size limits, dataset is not included.
+
+Download from:
+https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata
+
+After downloading, place these files into the data/ folder:
+
+- movies.csv
+- credits.csv
 
