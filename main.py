@@ -8,7 +8,7 @@ import os
 API_KEY = "YOUR API KEY"
 
 if not os.path.exists("movies.pkl"):
-    movies = pd.read_csv(r"C:\Users\PycharmProjects\project\data\movies.csv")
+    movies = pd.read_csv("data/movies.csv")
     movies = movies[['title']]
     movies = movies.dropna()
     movies = movies.reset_index(drop=True)
