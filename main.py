@@ -2,7 +2,7 @@ import pandas as pd
 import pickle
 
 
-movies = pd.read_csv(r"C:\Users\egemen\PycharmProjects\project\data\movies.csv")
+movies = pd.read_csv(r"C:\Users\PycharmProjects\project\data\movies.csv")
 
 
 movies = movies[['title']]
