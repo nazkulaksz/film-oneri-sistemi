@@ -7,7 +7,6 @@ import os
 
 API_KEY = "YOUR API KEY"
 
-
 if not os.path.exists("movies.pkl"):
     movies = pd.read_csv(r"C:\Users\PycharmProjects\project\data\movies.csv")
     movies = movies[['title']]
